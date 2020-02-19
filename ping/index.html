@@ -1,4 +1,20 @@
 
+<!-- //Script reference: https://github.com/alfg/ping.js/ -->
 
-BOBAS
-
+<script src="https://cdn.jsdelivr.net/gh/alfg/ping.js@0.2.2/dist/ping.min.js" type="text/javascript"></script>
+<script>
+    var p = new Ping();
+    p.ping("http://www.baidu.com", function (err, data) {
+        var response = {};
+        //' console.log(p); ' +
+        if (err) {
+            response.error = 1;
+            response.errorMessage = err;
+        } else {
+            response.error = 0;
+            response.time_ms = data;
+        }
+        raiseEvent("ping", response);
+    });
+</script>
+<div id="container">Pinging Server:</div>
