@@ -70,12 +70,16 @@
 
     }
 
-    createWorkbook('Sigurd')
-    createWorkSheet('Main')
-    writeCellValue('Main', 'C3', new Date(1968, 5, 1))
-    writeCellImage('Main', 'C4:E6', 'base54data')
-    downloadWorkbook();
 
+
+    function demo() {
+        alert('demo');
+        createWorkbook('Sigurd')
+        createWorkSheet('Main')
+        writeCellValue('Main', 'C3', new Date(1968, 5, 1))
+        writeCellImage('Main', 'C4:E6', 'base54data')
+        downloadWorkbook();
+    }
 </script>
 
 <div id="container">Excel Tool</div>
